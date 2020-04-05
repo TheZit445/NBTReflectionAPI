@@ -1,0 +1,7 @@
+name: NBTReflectionAPI
+author: thezit445
+version: 1.1.0
+prefix: NBTReflectionAPI
+main: ru.thezit445.nbtreflectionapi.NBTReflectionAPI
+description: 'API for change NBT in code.'
+api-version: 1.13
