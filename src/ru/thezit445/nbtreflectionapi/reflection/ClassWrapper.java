@@ -8,9 +8,9 @@ import java.util.logging.Logger;
 
 /**
  * <i>Created on 05.04.2020.</i>
- * A stripped down version of NMS TileEntity.
- * @author Titov Kirill <thezit445@yandex.ru>
- * @version 1.0.0
+ * Enum with necessary NMS classes.
+ * @author Kirill Titov <thezit445@yandex.ru>
+ * @version 1.1.0
  */
 public enum ClassWrapper {
 
@@ -44,6 +44,10 @@ public enum ClassWrapper {
         return className;
     }
 
+    /**
+     * Gets NMS class.
+     * @return Class
+     */
     public Class<?> get() {
         return clazz;
     }

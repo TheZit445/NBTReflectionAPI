@@ -3,6 +3,12 @@ package ru.thezit445.nbtreflectionapi.util;
 import ru.thezit445.nbtreflectionapi.reflection.ClassWrapper;
 import ru.thezit445.nbtreflectionapi.reflection.ReflectionAPI;
 
+/**
+ * <i>Created on 05.04.2020.</i>
+ * Enum with necessary constructors.
+ * @author Kirill Titov <thezit445@yandex.ru>
+ * @version 1.1.0
+ */
 public enum NMSInstance {
 
     NBT_TAG_COMPOUND(ClassWrapper.NBT_TAG_COMPOUND.get(), null),

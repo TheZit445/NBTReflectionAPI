@@ -13,7 +13,7 @@ import ru.thezit445.nbtreflectionapi.util.NMSMethod;
  * <i>Created on 05.04.2020.</i>
  * A stripped down version of NMS TileEntity.
  * @author Titov Kirill <thezit445@yandex.ru>
- * @version 1.0.0
+ * @version 1.1.0
  */
 public class NMSTileEntity {
 

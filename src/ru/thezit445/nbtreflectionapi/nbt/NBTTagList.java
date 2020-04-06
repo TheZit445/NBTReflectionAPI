@@ -8,7 +8,7 @@ import ru.thezit445.nbtreflectionapi.util.NMSMethod;
  * A stripped down version of NMS NBTTagList.
  * @author Titov Kirill <thezit445@yandex.ru>
  * @see NBTBase
- * @version 1.0.0
+ * @version 1.1.0
  */
 public class NBTTagList implements NBTBase {
 

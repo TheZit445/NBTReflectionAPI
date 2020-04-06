@@ -7,6 +7,12 @@ import ru.thezit445.nbtreflectionapi.reflection.ReflectionAPI;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+/**
+ * <i>Created on 05.04.2020.</i>
+ * Enum with necessary methods.
+ * @author Kirill Titov <thezit445@yandex.ru>
+ * @version 1.1.0
+ */
 public enum NMSMethod {
 
     BASE_BLOCK_POSITION_GET_X(ClassWrapper.BASE_BLOCK_POSITION, "getX",null),
@@ -58,6 +64,12 @@ public enum NMSMethod {
         this.typeArgs = typeArgs;
     }
 
+    /**
+     * Invokes method.
+     * @param instance - the instance that invokes method. May be null, if you need invoke static method.
+     * @param args - arguments for invoke method. See classes of parameters in the third parameter of enum constructor.
+     * @return Object - nms object (Example: NBTTagCompound). May be null, if method return void.
+     */
     public Object invoke(Object instance, Object... args) {
         return ReflectionAPI.invokeMethod(clazz.get(), instance, methodName, typeArgs, args);
     }
