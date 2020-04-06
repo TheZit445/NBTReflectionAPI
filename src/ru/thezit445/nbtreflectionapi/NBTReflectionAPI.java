@@ -6,7 +6,7 @@ import ru.thezit445.nbtreflectionapi.reflection.ClassWrapper;
 
 /**
  * <i>Created on 05.04.2020.</i>
- * A stripped down version of NMS TileEntity.
+ * Main plugin class.
  * @author Titov Kirill <thezit445@yandex.ru>
  * @version 1.1.0
  */
