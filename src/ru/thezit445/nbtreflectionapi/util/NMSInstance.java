@@ -15,8 +15,8 @@ public enum NMSInstance {
     NBT_TAG_LIST(ClassWrapper.NBT_TAG_LIST.get(), null),
     BLOCK_POSITION(ClassWrapper.BLOCK_POSITION.get(), new Class[]{int.class, int.class, int.class});
 
-    private Class<?> clazz = null;
-    private Class<?>[] typeArgs = new Class[0];
+    private Class<?> clazz;
+    private Class<?>[] typeArgs;
 
     NMSInstance(Class<?> clazz, Class<?>[] typeArgs) {
         this.clazz = clazz;

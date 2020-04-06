@@ -1,6 +1,5 @@
 package ru.thezit445.nbtreflectionapi.util;
 
-import net.minecraft.server.v1_15_R1.NBTCompressedStreamTools;
 import ru.thezit445.nbtreflectionapi.nbt.NBTTagCompound;
 
 import java.io.InputStream;
@@ -16,7 +15,7 @@ public final class NBTUtils {
 
     /**
      * Parses string to NBTTagCompound.
-     * @param tag
+     * @param tag - NBTTagCompound in String format.
      * @return NBTTagCompound
      */
     public static NBTTagCompound parse(String tag) {
@@ -26,7 +25,7 @@ public final class NBTUtils {
 
     /**
      * Writes NBTTagCompound to file in compressed form.
-     * @param stream
+     * @param stream - OutputStream for write in file.
      */
     public static void write(NBTTagCompound nbt, OutputStream stream) {
         NMSMethod.NBT_COMPRESSED_STREAM_TOOLS_WRITE_COMPRESSED.invoke(null, nbt.asNMS(), stream);
@@ -34,7 +33,7 @@ public final class NBTUtils {
 
     /**
      * Reads NBTTagCompound from file.
-     * @param stream
+     * @param stream - InputStream for read from file.
      * @return NBTTagCompound
      */
     public static NBTTagCompound read(InputStream stream) {

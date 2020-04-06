@@ -51,7 +51,7 @@ public class NBTTagCompound implements NBTBase {
     /**
      * Sets a value into section.
      * @param section - Name of sub tag.
-     * @param value
+     * @param value - Integer.
      */
     public void setInt(String section, int value) {
         NMSMethod.NBT_TAG_COMPOUND_SET_INT.invoke(nms, section, value);
@@ -60,7 +60,7 @@ public class NBTTagCompound implements NBTBase {
     /**
      * Sets a integer array into section.
      * @param section - Name of sub tag.
-     * @param array
+     * @param array - Integer array.
      */
     public void setIntArray(String section, int[] array) {
         NMSMethod.NBT_TAG_COMPOUND_SET_INT_ARRAY.invoke(nms, section, array);
@@ -69,7 +69,7 @@ public class NBTTagCompound implements NBTBase {
     /**
      * Sets a value into section.
      * @param section - Name of sub tag.
-     * @param value
+     * @param value - Short.
      */
     public void setShort(String section, short value) {
         NMSMethod.NBT_TAG_COMPOUND_SET_SHORT.invoke(nms, section, value);
@@ -78,7 +78,7 @@ public class NBTTagCompound implements NBTBase {
     /**
      * Sets a value into section.
      * @param section - Name of sub tag.
-     * @param value
+     * @param value - Byte.
      */
     public void setByte(String section, byte value) {
         NMSMethod.NBT_TAG_COMPOUND_SET_BYTE.invoke(nms, section, value);
@@ -87,7 +87,7 @@ public class NBTTagCompound implements NBTBase {
     /**
      * Sets a byte array into section.
      * @param section - Name of sub tag.
-     * @param array
+     * @param array - Byte array.
      */
     public void setByteArray(String section, byte[] array) {
         NMSMethod.NBT_TAG_COMPOUND_SET_BYTE_ARRAY.invoke(nms, section, array);
@@ -96,7 +96,7 @@ public class NBTTagCompound implements NBTBase {
     /**
      * Sets a value into section.
      * @param section - Name of sub tag.
-     * @param value
+     * @param value - Long.
      */
     public void setLong(String section, long value) {
         NMSMethod.NBT_TAG_COMPOUND_SET_LONG.invoke(nms, section, value);
@@ -105,7 +105,7 @@ public class NBTTagCompound implements NBTBase {
     /**
      * Sets a value into section.
      * @param section - Name of sub tag.
-     * @param value
+     * @param value - Boolean.
      */
     public void setBoolean(String section, boolean value) {
         NMSMethod.NBT_TAG_COMPOUND_SET_BOOLEAN.invoke(nms, section, value);
@@ -114,7 +114,7 @@ public class NBTTagCompound implements NBTBase {
     /**
      * Sets a value into section.
      * @param section - Name of sub tag.
-     * @param value
+     * @param value - String.
      */
     public void setString(String section, String value) {
         NMSMethod.NBT_TAG_COMPOUND_SET_STRING.invoke(nms, section, value);
@@ -123,7 +123,7 @@ public class NBTTagCompound implements NBTBase {
     /**
      * Sets a value into section.
      * @param section - Name of sub tag.
-     * @param value
+     * @param value - Double.
      */
     public void setDouble(String section, double value) {
         NMSMethod.NBT_TAG_COMPOUND_SET_DOUBLE.invoke(nms, section, value);
@@ -132,7 +132,7 @@ public class NBTTagCompound implements NBTBase {
     /**
      * Sets a value into section.
      * @param section - Name of sub tag.
-     * @param value
+     * @param value - Float.
      */
     public void setFloat(String section, float value) {
         NMSMethod.NBT_TAG_COMPOUND_SET_FLOAT.invoke(nms, section, value);
@@ -149,7 +149,7 @@ public class NBTTagCompound implements NBTBase {
 
     /**
      * Gets a tag from section.
-     * @param section
+     * @param section - Name of key.
      * @return NBTTagCompound
      */
     public NBTTagCompound get(String section) {

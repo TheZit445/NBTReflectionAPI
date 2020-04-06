@@ -38,7 +38,7 @@ public class NMSItem {
      * @param nbt
      */
     public NMSItem(NBTTagCompound nbt) {
-        nms = NMSMethod.ITEM_STACK_GET_FROM_NBT.invoke(null, nbt);
+        nms = NMSMethod.ITEM_STACK_GET_FROM_NBT.invoke(null, nbt.asNMS());
     }
 
     /**

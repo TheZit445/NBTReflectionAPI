@@ -35,8 +35,8 @@ public class NBTTagList implements NBTBase {
 
     /**
      * Adds NBTBase object to an index location.
-     * @param base
-     * @param index
+     * @param base - NBT object.
+     * @param index - Index of element in array.
      */
     public void add(NBTBase base, int index){
         NMSMethod.NBT_TAG_LIST_ADD.invoke(nbt, index, base.asNMS());
@@ -44,7 +44,7 @@ public class NBTTagList implements NBTBase {
 
     /**
      * Adds NBTBase object.
-     * @param base
+     * @param base - NBT object.
      */
     public void add(NBTBase base) {
         add(base, size());

@@ -46,7 +46,7 @@ public enum ClassWrapper {
 
     /**
      * Gets NMS class.
-     * @return Class
+     * @return Class of NMS version.
      */
     public Class<?> get() {
         return clazz;

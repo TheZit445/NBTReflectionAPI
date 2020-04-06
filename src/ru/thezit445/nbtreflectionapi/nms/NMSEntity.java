@@ -1,7 +1,6 @@
 package ru.thezit445.nbtreflectionapi.nms;
 
 import org.bukkit.entity.Entity;
-import ru.thezit445.nbtreflectionapi.nbt.NBTBase;
 import ru.thezit445.nbtreflectionapi.nbt.NBTTagCompound;
 import ru.thezit445.nbtreflectionapi.reflection.ClassWrapper;
 import ru.thezit445.nbtreflectionapi.util.NMSMethod;
@@ -30,7 +29,7 @@ public class NMSEntity {
 
     /**
      * Sets NBTTagCompound for the entity.
-     * @param nbt
+     * @param nbt - NBTTagCompound.
      */
     public void setNBT(NBTTagCompound nbt) {
         NMSMethod.ENTITY_SET_NBT.invoke(nms, nbt.asNMS());
@@ -42,7 +41,7 @@ public class NMSEntity {
      */
     public NBTTagCompound getNBT() {
         NBTTagCompound nbt = new NBTTagCompound();
-        Object nmsNbtTagCompound = NMSMethod.ENTITY_GET_NBT.invoke(nms, nbt.asNMS());
+        NMSMethod.ENTITY_GET_NBT.invoke(nms, nbt.asNMS());
         return nbt;
     }
 

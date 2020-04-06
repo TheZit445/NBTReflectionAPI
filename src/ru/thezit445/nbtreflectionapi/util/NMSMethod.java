@@ -54,9 +54,9 @@ public enum NMSMethod {
     NBT_TAG_LIST_SIZE(ClassWrapper.NBT_TAG_LIST,"size", null),
     MOJANGSON_PARSER_PARSE(ClassWrapper.MOJANGSON_PARSER,"parse", new Class[]{String.class});
 
-    private ClassWrapper clazz = null;
-    private String methodName = null;
-    private Class<?>[] typeArgs = new Class[0];
+    private ClassWrapper clazz;
+    private String methodName;
+    private Class<?>[] typeArgs;
 
     NMSMethod(ClassWrapper clazz, String methodName, Class<?>[] typeArgs) {
         this.clazz = clazz;

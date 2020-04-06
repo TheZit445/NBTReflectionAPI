@@ -24,7 +24,7 @@ public class NMSTileEntity {
 
     /**
      * Returns a clone if block on this location is TileEntity, else returns null.
-     * @param location
+     * @param location - Location of target block.
      */
     public NMSTileEntity(Location location) {
         Block block = location.getBlock();
@@ -51,7 +51,7 @@ public class NMSTileEntity {
 
     /**
      * Sets NBTTagCompound for the tile entity.
-     * @param nbt
+     * @param nbt - NBTTagCompound.
      */
     public void setNBT(NBTTagCompound nbt) {
         NMSMethod.TILE_ENTITY_SET_NBT.invoke(nms, nbt.asNMS());

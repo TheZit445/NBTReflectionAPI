@@ -2,7 +2,9 @@ package ru.thezit445.nbtreflectionapi.reflection;
 
 import ru.thezit445.nbtreflectionapi.NBTReflectionAPI;
 
+import java.io.EOFException;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,8 +25,10 @@ public class ReflectionAPI {
         try {
             Constructor<T> constructor = clazz.getDeclaredConstructor(typeArgs);
             constructor.setAccessible(true);
-            T newInstance = (T) constructor.newInstance(args);
-            return newInstance;
+            return constructor.newInstance(args);
+        } catch (InvocationTargetException e) {
+            if (!(e.getCause() instanceof EOFException))
+                Logger.getLogger(NBTReflectionAPI.class.getName()).log(Level.SEVERE, "Reflection error: ", e.getCause());
         } catch (Exception e) {
             Logger.getLogger(NBTReflectionAPI.class.getName()).log(Level.SEVERE, "Reflection error: ", e);
         }
@@ -35,8 +39,10 @@ public class ReflectionAPI {
         try {
             Method method = clazz.getDeclaredMethod(methodName, typeArgs);
             method.setAccessible(true);
-            Object object = method.invoke(instance, args);
-            return object;
+            return method.invoke(instance, args);
+        } catch (InvocationTargetException e) {
+            if (!(e.getCause() instanceof EOFException))
+                Logger.getLogger(NBTReflectionAPI.class.getName()).log(Level.SEVERE, "Reflection error: ", e.getCause());
         } catch (Exception e) {
             Logger.getLogger(NBTReflectionAPI.class.getName()).log(Level.SEVERE, "Reflection error: ", e);
         }
