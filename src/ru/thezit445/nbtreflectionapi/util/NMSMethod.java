@@ -34,7 +34,7 @@ public enum NMSMethod {
     CRAFT_ITEM_STACK_AS_NMS_COPY(ClassWrapper.CRAFT_ITEM_STACK, "asNMSCopy", new Class[]{ItemStack.class}),
     ITEM_STACK_GET_NBT(ClassWrapper.ITEM_STACK,"save", new Class[]{ClassWrapper.NBT_TAG_COMPOUND.get()}),
     ITEM_STACK_SET_NBT_TAG_COMPOUND(ClassWrapper.CRAFT_ITEM_STACK,"a", new Class[]{ClassWrapper.NBT_TAG_COMPOUND.get()}),
-    ITEM_STACK_GET_FROM_NBT(ClassWrapper.CRAFT_ITEM_STACK,"a", new Class[]{ClassWrapper.NBT_TAG_COMPOUND.get()}),
+    ITEM_STACK_GET_FROM_NBT(ClassWrapper.ITEM_STACK,"a", new Class[]{ClassWrapper.NBT_TAG_COMPOUND.get()}),
     NBT_TAG_COMPOUND_TO_STRING(ClassWrapper.NBT_TAG_COMPOUND,"toString", null),
     NBT_TAG_COMPOUND_GET(ClassWrapper.NBT_TAG_COMPOUND,"get", new Class[]{String.class}),
     NBT_TAG_COMPOUND_SET(ClassWrapper.NBT_TAG_COMPOUND,"set", new Class[]{String.class, ClassWrapper.NBT_BASE.get()}),
