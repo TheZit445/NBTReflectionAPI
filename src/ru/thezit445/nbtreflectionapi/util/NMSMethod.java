@@ -49,7 +49,7 @@ public enum NMSMethod {
     NBT_TAG_COMPOUND_SET_SHORT(ClassWrapper.NBT_TAG_COMPOUND,"setShort", new Class[]{String.class, short.class}),
     NBT_TAG_COMPOUND_SET_STRING(ClassWrapper.NBT_TAG_COMPOUND,"setString", new Class[]{String.class, String.class}),
     NBT_COMPRESSED_STREAM_TOOLS_READ_COMPRESSED(ClassWrapper.NBT_COMPRESSED_STREAM_TOOLS,"a", new Class[]{InputStream.class}),
-    NBT_COMPRESSED_STREAM_TOOLS_WRITE_COMPRESSED(ClassWrapper.NBT_COMPRESSED_STREAM_TOOLS,"a", new Class[]{OutputStream.class}),
+    NBT_COMPRESSED_STREAM_TOOLS_WRITE_COMPRESSED(ClassWrapper.NBT_COMPRESSED_STREAM_TOOLS,"a", new Class[]{ClassWrapper.NBT_TAG_COMPOUND.get(), OutputStream.class}),
     NBT_TAG_LIST_ADD(ClassWrapper.NBT_TAG_LIST,"add", new Class[]{int.class, ClassWrapper.NBT_BASE.get()}),
     NBT_TAG_LIST_SIZE(ClassWrapper.NBT_TAG_LIST,"size", null),
     MOJANGSON_PARSER_PARSE(ClassWrapper.MOJANGSON_PARSER,"parse", new Class[]{String.class});
